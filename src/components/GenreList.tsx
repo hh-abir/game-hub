@@ -32,6 +32,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
               onClick={() => onSelectGenre(genre)}
               variant="link"
               fontSize="large"
+              wordBreak="break-word"
             >
               {genre.name}
             </Button>
