@@ -3,7 +3,7 @@ import { create } from "zustand";
 export interface GameQuery {
   genreId?: number;
   platformId?: number;
-  sortOder?: string;
+  sortOrder?: string;
   searchText?: string;
 }
 interface GameQueryStore {

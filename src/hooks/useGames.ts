@@ -16,7 +16,7 @@ const apiClient = new APIClient<Game>("/games");
 
 const useGames = () => {
   const gameQuery = useGameQueryStore((s) => s.gameQuery);
-
+  console.log(gameQuery);
   return useInfiniteQuery({
     queryKey: ["games", gameQuery],
     queryFn: ({ pageParam }) =>
@@ -24,7 +24,7 @@ const useGames = () => {
         params: {
           genres: gameQuery.genreId,
           parent_platforms: gameQuery.platformId,
-          ordering: gameQuery.sortOder,
+          ordering: gameQuery.sortOrder,
           search: gameQuery.searchText,
           page: pageParam,
         },

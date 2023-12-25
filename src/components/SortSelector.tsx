@@ -30,8 +30,9 @@ const SortSelector = () => {
     },
   ];
   const setSortOrder = useGameQueryStore((s) => s.setSortOrder);
-  const sortOrder = useGameQueryStore((s) => s.gameQuery.sortOder);
+  const sortOrder = useGameQueryStore((s) => s.gameQuery.sortOrder);
   const currentSortOder = sortOrders.find((order) => order.value === sortOrder);
+
   return (
     <Menu>
       <MenuButton as={Button} rightIcon={<BsChevronDown />}>
